@@ -64,7 +64,7 @@ public class MyPageViewHandler {
         try {
             if (!orderCancelled.validate()) return;
                 // view 객체 조회
-            Optional<MyPage> myPageOptional = myPageRepository.findByOrderId(orderCancelled.getId());
+            Optional<MyPage> myPageOptional = myPageRepository.findById(orderCancelled.getId());
 
             if( myPageOptional.isPresent()) {
                  MyPage myPage = myPageOptional.get();
